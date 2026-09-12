@@ -16,7 +16,7 @@ function TechnologyList({ technologies }: TechnologyListProps) {
       {/* Heading */}
       <div className="mb-10 text-center">
         <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-          Explore <span className="bg-gradient-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">Technologies</span>
+          Explore <span className="bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">Technologies</span>
         </h2>
 
         <p className="mx-auto mt-3 max-w-2xl text-gray-600">
