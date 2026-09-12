@@ -7,12 +7,12 @@ export default function Hero() {
         {/* Left: Hero Text */}
         <div className="text-center lg:text-left">
             <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl lg:text-6xl">
-            Build Your Ideal<br />
+            Build Your Ideal<br/>
             <span
-                className="ml-2 bg-clip-text text-transparent"
+                className="bg-clip-text text-transparent"
                 style={{ backgroundImage: "var(--brand-gradient)" }}
             >
-                Development Stack
+            Development Stack
             </span>
             </h1>
 

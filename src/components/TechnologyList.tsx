@@ -29,6 +29,10 @@ function TechnologyList({ technologies }: TechnologyListProps) {
       );
     };
 
+    const handleRemoveAll = () => {
+      setSelectedTechnologies([]);
+    };
+
     return (
     <section
       id="technologies"
@@ -61,6 +65,7 @@ function TechnologyList({ technologies }: TechnologyListProps) {
         <div className="lg:self-start">
           <YourStack selectedTechnologies={selectedTechnologies}
           onRemove=  {handleRemove}
+          onRemoveAll={handleRemoveAll}
           />
         </div>
       </div>

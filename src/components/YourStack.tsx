@@ -4,9 +4,10 @@ import type { Technology } from "../types/technology";
 interface YourStackProps {
   selectedTechnologies: Technology[];
   onRemove: (id: number) => void;
+  onRemoveAll: () => void;
 }
 
-export default function YourStack({selectedTechnologies, onRemove}: YourStackProps) {
+export default function YourStack({selectedTechnologies, onRemove, onRemoveAll}: YourStackProps) {
   return (
     <div className="h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
       <h3 className="text-xl font-bold text-gray-900">
@@ -60,6 +61,15 @@ export default function YourStack({selectedTechnologies, onRemove}: YourStackPro
                     </button>
                     </div>
                 ))}
+
+                <button
+                    type="button"
+                    onClick={onRemoveAll}
+                    className="mt-3 w-full rounded-lg border border-red-200 px-3 py-2 text-sm font-semibold text-red-500 transition hover:bg-red-50"
+                >
+                    Remove All
+                </button>
+
                 </div>
             )}
             </div>
