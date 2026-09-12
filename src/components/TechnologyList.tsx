@@ -1,6 +1,7 @@
 import type { Technology } from "../types/technology";
 import TechnologyCard from "./TechnologgyCard";
 import YourStack from "./YourStack";
+import { useState } from "react";
 
 
 interface TechnologyListProps {
@@ -8,7 +9,21 @@ interface TechnologyListProps {
 }
 
 function TechnologyList({ technologies }: TechnologyListProps) {
-  return (
+
+    const [selectedTechnologies, setSelectedTechnologies]= useState<Technology[]> ([]);
+
+    const handleSelect = (technology: Technology) => {
+      setSelectedTechnologies((current) => {
+            if (current.some((item) => item.id === technology.id)) {
+              alert("This technology is already in your stack.");
+              return current;
+            }
+
+            return [...current, technology];
+        });
+    };
+
+    return (
     <section
       id="technologies"
       className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"
@@ -31,12 +46,13 @@ function TechnologyList({ technologies }: TechnologyListProps) {
             <TechnologyCard
               key={technology.id}
               technology={technology}
+              onSelect={handleSelect}
             />
           ))}
         </div>
 
         <div className="lg:self-start">
-          <YourStack />
+          <YourStack selectedTechnologies={selectedTechnologies} />
         </div>
       </div>
     </section>

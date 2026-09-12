@@ -2,9 +2,10 @@ import type { Technology } from "../types/technology";
 
 interface TechnologyCardProps {
   technology: Technology;
+  onSelect:  (technology: Technology) => void;
 }
 
-function TechnologyCard({ technology }: TechnologyCardProps) {
+function TechnologyCard({ technology, onSelect }: TechnologyCardProps) {
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
       {/* Icon + Badge */}
@@ -53,6 +54,7 @@ function TechnologyCard({ technology }: TechnologyCardProps) {
       {/* Add Button */}
       <button
         type="button"
+        onClick={() => onSelect(technology)}
         className="mt-5 w-full rounded-xl px-4 py-2.5 font-semibold text-white transition hover:opacity-90"
         style={{ background: "var(--brand-gradient)" }}
       >
