@@ -3,9 +3,10 @@ import type { Technology } from "../types/technology";
 
 interface YourStackProps {
   selectedTechnologies: Technology[];
+  onRemove: (id: number) => void;
 }
 
-export default function YourStack({selectedTechnologies}: YourStackProps) {
+export default function YourStack({selectedTechnologies, onRemove}: YourStackProps) {
   return (
     <div className="h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
       <h3 className="text-xl font-bold text-gray-900">
@@ -20,30 +21,48 @@ export default function YourStack({selectedTechnologies}: YourStackProps) {
             } Selected`}
         </p>
 
-      <div className="mt-6 flex min-h-48 items-center justify-center rounded-xl border border-dashed border-gray-300">
+        <div className="mt-5 rounded-xl border border-dashed border-gray-300 p-3">
             {selectedTechnologies.length === 0 ? (
+                <div className="flex min-h-14 items-center justify-center">
                 <p className="text-sm text-gray-400">
-                Your stack is empty
+                    Your stack is empty
                 </p>
-            ) : (
-            <div className="space-y-3">
-                {selectedTechnologies.map((technology) => (
-                <div
-                    key={technology.id}
-                    className="rounded-lg bg-gray-50 p-3"
-                >
-                    <p className="font-medium text-gray-900">
-                    {technology.name}
-                    </p>
-
-                    <p className="text-xs text-gray-500">
-                    {technology.category}
-                    </p>
                 </div>
+            ) : (
+                <div className="space-y-2">
+                {selectedTechnologies.map((technology) => (
+                    <div
+                    key={technology.id}
+                    className="flex w-full items-center gap-3 rounded-lg bg-gray-50 px-3 py-2"
+                    >
+                    <img
+                        src={technology.icon}
+                        alt={technology.name}
+                        className="h-7 w-7 shrink-0"
+                    />
+
+                    <div className="flex-1">
+                        <p className="text-sm font-semibold text-gray-900">
+                        {technology.name}
+                        </p>
+
+                        <p className="text-xs text-gray-500">
+                        {technology.category}
+                        </p>
+                    </div>
+
+                    <button
+                        type="button"
+                        onClick={() => onRemove(technology.id)}
+                        className="shrink-0 text-gray-400 font-semibold transition hover:text-red-500"
+                    >
+                        ✕
+                    </button>
+                    </div>
                 ))}
-            </div>
+                </div>
             )}
-        </div>
+            </div>
     </div>
     );
 }

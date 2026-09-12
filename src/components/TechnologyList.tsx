@@ -23,6 +23,12 @@ function TechnologyList({ technologies }: TechnologyListProps) {
         });
     };
 
+    const handleRemove = (id: number) => {
+      setSelectedTechnologies((current) =>
+        current.filter((technology) => technology.id !== id)
+      );
+    };
+
     return (
     <section
       id="technologies"
@@ -47,12 +53,15 @@ function TechnologyList({ technologies }: TechnologyListProps) {
               key={technology.id}
               technology={technology}
               onSelect={handleSelect}
+              isSelected = {selectedTechnologies.some((item)=> item.id === technology.id)}
             />
           ))}
         </div>
 
         <div className="lg:self-start">
-          <YourStack selectedTechnologies={selectedTechnologies} />
+          <YourStack selectedTechnologies={selectedTechnologies}
+          onRemove=  {handleRemove}
+          />
         </div>
       </div>
     </section>
