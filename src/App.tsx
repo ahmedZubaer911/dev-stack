@@ -1,6 +1,6 @@
 
 import Navbar from "./components/Navbar";
-import './App.css'
+import Hero from "./components/Hero";
 
 function App() {
 
@@ -8,8 +8,9 @@ function App() {
   return (
       <div>
         <Navbar />
+        <Hero />
 
-        <h1>Dev Stack</h1>
+        
 
       </div>
   );

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logoText from "../assets/logo-text.png";
 
 export default function Navbar() {
 
@@ -21,14 +22,12 @@ export default function Navbar() {
                 </button>
 
                 {/* Center Brand */}
-                <a href="#" className="flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-linear-to-r from-orange-500 via-pink-500 to-violet-500 text-sm font-bold text-white">
-                    D
-                    </div>
-
-                    <span className="bg-linear-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-lg font-bold text-transparent">
-                    Dev Stack
-                    </span>
+                <a href="#">
+                    <img
+                        src={logoText}
+                        alt="Dev Stack"
+                        className="h-8 w-auto"
+                    />
                 </a>
 
                 {/* Auth Buttons */}
@@ -80,15 +79,11 @@ export default function Navbar() {
                 
                 {/* Logo + Brand */}
                 <a href="#" className="flex items-center gap-2">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-linear-to-r from-orange-500 via-pink-500 to-violet-500 text-lg font-bold text-white">
-                        D
-                    </div>
-
-                    <div className="bg-linear-to-r bg-clip-text text-xl font-bold"> Dev
-                        <span className="bg-linear-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-xl font-bold text-transparent">
-                            Stack
-                        </span>
-                    </div>
+                    <img
+                        src={logoText}
+                        alt="Dev Stack"
+                        className="h-9 w-auto"
+                    />
                 </a>
 
                 {/* Navigation Links */}
