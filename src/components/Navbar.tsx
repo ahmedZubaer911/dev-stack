@@ -42,7 +42,7 @@ export default function Navbar() {
                     <button
                     type="button"
                     className="rounded-full px-3 py-1.5 text-xs font-semibold text-white"
-                    style={{background: "var( --brand-gradient)"}}
+                    style={{background: "var(--brand-gradient)"}}
                     >
                     Sign Up
                     </button>
@@ -93,19 +93,19 @@ export default function Navbar() {
                         Home
                     </a>
 
-                    <a href="#technologies" className="text-sm font-medium text-mist-700 hover:text-orange-500">
+                    <a href="#technologies" className="text-sm font-medium text-gray-700 hover:text-orange-500">
                         Technologies
                     </a>
 
-                    <a href="#projects" className="text-sm font-medium text-mist-700 hover:text-orange-500">
+                    <a href="#projects" className="text-sm font-medium text-gray-700 hover:text-orange-500">
                         Projects
                     </a>
 
-                    <a href="#about" className="text-sm font-medium text-mist-700 hover:text-orange-500">
+                    <a href="#about" className="text-sm font-medium text-gray-700 hover:text-orange-500">
                         About
                     </a>
 
-                    <a href="#contact" className="text-sm font-medium text-mist-700 hover:text-orange-500">
+                    <a href="#contact" className="text-sm font-medium text-gray-700 hover:text-orange-500">
                         Contact
                     </a>
                 </div>

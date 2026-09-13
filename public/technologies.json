@@ -118,5 +118,35 @@
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular"
+  },
+  {
+    "id": 13,
+    "name": "Java",
+    "category": "Language",
+    "description": "A widely used object-oriented programming language for building reliable and scalable applications.",
+    "icon": "https://cdn.simpleicons.org/openjdk",
+    "rating": 4.8,
+    "difficulty": "Intermediate",
+    "badge": "Popular"
+  },
+  {
+    "id": 14,
+    "name": "Python",
+    "category": "Language",
+    "description": "A versatile programming language known for its simple syntax and wide range of applications.",
+    "icon": "https://cdn.simpleicons.org/python",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Popular"
+  },
+  {
+    "id": 15,
+    "name": "C++",
+    "category": "Language",
+    "description": "A powerful general-purpose programming language widely used for performance-focused software and problem solving.",
+    "icon": "https://cdn.simpleicons.org/cplusplus",
+    "rating": 4.8,
+    "difficulty": "Intermediate",
+    "badge": "Powerful"
   }
 ]

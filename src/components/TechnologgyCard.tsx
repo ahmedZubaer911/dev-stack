@@ -57,7 +57,8 @@ function TechnologyCard({ technology, onSelect, isSelected }: TechnologyCardProp
         type="button"
         onClick={() => onSelect(technology)}
         disabled={isSelected}
-        className="mt-5 w-full rounded-xl px-4 py-2.5 font-semibold text-white transition disabled:cursor-not-allowed disabled:opacity-40 hover:opacity-90"
+        className="mt-5 w-full rounded-xl px-4 py-2.5 font-semibold text-white transition 
+          disabled:cursor-not-allowed disabled:opacity-40 hover:opacity-90"
         style={{ background: "var(--brand-gradient)" }}
       >
         {isSelected ? "✓ Added to Stack" : "Add to Stack"}

@@ -55,7 +55,7 @@ function TechnologyList({ technologies }: TechnologyListProps) {
       {/* Heading */}
       <div className="mb-10 text-center">
         <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-          Explore <span className="bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">Technologies</span>
+          Explore <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--brand-gradient)" }}>Technologies</span>
         </h2>
 
         <p className="mx-auto mt-3 max-w-2xl text-gray-600">
@@ -64,7 +64,7 @@ function TechnologyList({ technologies }: TechnologyListProps) {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
         <div className="lg:col-span-3 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {technologies.map((technology) => (
             <TechnologyCard
@@ -76,7 +76,7 @@ function TechnologyList({ technologies }: TechnologyListProps) {
           ))}
         </div>
 
-        <div className="lg:self-start">
+        <div className="lg:col-span-1 lg:self-start">
           <YourStack selectedTechnologies={selectedTechnologies}
           onRemove=  {handleRemove}
           onRemoveAll={handleRemoveAll}

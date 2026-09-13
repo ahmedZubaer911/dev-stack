@@ -8,19 +8,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           
           {/* Brand */}
-          <div>
+          <div className="text-center md:text-left">
             <img
               src={logoText}
               alt="Dev Stack"
-              className="h-9 w-auto"
+              className="mx-auto h-9 w-auto md:mx-0"
             />
 
-            <p className="mt-4 max-w-xs text-sm leading-6 text-gray-600">
+            <p className="mx-auto mt-4 max-w-xs text-sm leading-6 text-gray-600 md:mx-0">
               Curated tools, technologies, and resources for developers building modern software.
             </p>
 
             {/* Social Links */}
-            <div className="mt-5 flex gap-4">
+            <div className="mt-5 flex justify-center gap-4 md:justify-start">
               <a
                 href="https://github.com"
                 target="_blank"
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           {/* Product */}
-        <div>
+        <div className="hidden md:block">
             <h3 className="text-sm font-semibold text-gray-900">
               Product
             </h3>
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
           {/* Company */}
-          <div>
+          <div className="hidden md:block">
             <h3 className="text-sm font-semibold text-gray-900">
               Company
             </h3>
@@ -89,7 +89,7 @@ export default function Footer() {
           </div>
 
           {/* Legal */}
-          <div>
+          <div className="hidden md:block">
             <h3 className="text-sm font-semibold text-gray-900">
               Legal
             </h3>
@@ -107,17 +107,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-10 flex flex-col gap-3 border-t border-gray-200 pt-6 text-sm text-gray-500 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex items-center justify-between gap-3 border-t border-gray-200 pt-6 text-sm text-gray-500">
           <p>
             © 2026 Dev Stack. All rights reserved.
           </p>
 
-          <div className="flex gap-5">
+          <div className="flex shrink-0 gap-3">
             <a href="#" className="hover:text-orange-500">
-              Privacy
+              Privacy Policy
             </a>
             <a href="#" className="hover:text-orange-500">
-              Terms
+              Terms of Service
             </a>
           </div>
         </div>
