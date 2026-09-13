@@ -4,6 +4,8 @@ import Hero from "./components/Hero";
 import TechnologyList from "./components/TechnologyList";
 import { useEffect, useState } from "react";
 import type { Technology } from "./types/technology";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
     const [technologies, setTechnologies] = useState<Technology[]>([]);
@@ -42,6 +44,7 @@ function App() {
           <TechnologyList technologies={technologies} />
 
         
+        <ToastContainer />
 
         </div>
     );
