@@ -9,7 +9,7 @@ export default function Navbar() {
         <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white">
 
             {/* Mobile Navbar */}
-            <div className="flex h-16 items-center justify-between px-4 md:hidden">
+            <div className="flex h-16 items-center justify-between px-4 lg:hidden">
 
                 {/* Hamburger */}
                 <button
@@ -49,7 +49,7 @@ export default function Navbar() {
             </div>
 
             {isMenuOpen && (
-            <div className="border-t border-gray-200 bg-white px-4 py-4 md:hidden">
+            <div className="border-t border-gray-200 bg-white px-4 py-4 lg:hidden">
                 <div className="flex flex-col gap-4">
                     <a href="#" onClick={() => setIsMenuOpen(false)}>
                         Home
@@ -75,7 +75,7 @@ export default function Navbar() {
             )}
 
             {/* Desktop Navbar */}
-            <div className="mx-auto hidden h-16 max-w-7xl items-center justify-between px-4 sm:px-6 md:flex lg:px-8">
+            <div className="mx-auto hidden h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:flex lg:px-8">
                 
                 {/* Logo + Brand */}
                 <a href="#" className="flex items-center gap-2">
@@ -87,7 +87,7 @@ export default function Navbar() {
                 </a>
 
                 {/* Navigation Links */}
-                <div className="hidden items-center gap-8 md:flex">
+                <div className="hidden items-center gap-8 lg:flex">
                     <a href="#" className="text-sm font-semibold text-red-500 hover:text-orange-500">
                         Home
                     </a>
