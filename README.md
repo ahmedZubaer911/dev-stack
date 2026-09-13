@@ -77,7 +77,6 @@ http://localhost:5173
 
 ## 📸 Preview
 
-<!-- Add a screenshot of your project here -->
 
 ![Dev Stack Preview](./src/assets/dev-stack-preview.png)
 
@@ -139,7 +138,7 @@ JSX is a syntax that lets us write HTML-like code inside JavaScript/TypeScript. 
 
 ### 3. What does the `useState` hook do, and where did you use it in this project?
 
-`useState` is used to store and update data in a React component. In this project, I used it to manage the technology data, selected technologies, and loading state.
+`useState` is used to store and update data in a React component. In this project, I used it to manage the selected technologies and the loading state.
 
 ### 4. What does the `useEffect` hook do, and why did you need it to load the JSON data?
 
