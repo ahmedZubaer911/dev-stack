@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import type { Technology } from "./types/technology";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./components/Footer";
 
 function App() {
     const [technologies, setTechnologies] = useState<Technology[]>([]);
@@ -42,6 +43,7 @@ function App() {
           <Navbar />
           <Hero />
           <TechnologyList technologies={technologies} />
+          <Footer />
 
         
         <ToastContainer />

@@ -41,7 +41,8 @@ export default function Navbar() {
 
                     <button
                     type="button"
-                    className="rounded-full bg-linear-to-r from-orange-500 via-pink-500 to-violet-500 px-3 py-1.5 text-xs font-semibold text-white"
+                    className="rounded-full px-3 py-1.5 text-xs font-semibold text-white"
+                    style={{background: "var( --brand-gradient)"}}
                     >
                     Sign Up
                     </button>
@@ -120,7 +121,8 @@ export default function Navbar() {
 
                     <button
                         type="button"
-                        className="rounded-full bg-linear-to-r from-orange-500 via-pink-500 to-violet-500 px-5 py-2 text-sm font-semibold text-white transition hover:opacity-90"
+                        className="rounded-full px-5 py-2 text-sm font-semibold text-white transition hover:opacity-90"
+                        style={{background: "var(--brand-gradient"}}
                     >
                         Sign Up
                     </button>
